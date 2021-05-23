@@ -25,6 +25,9 @@ use App\Http\Controllers\MesssageController;
 Route::get('/dashindex', function () {
     return view('dashindex');
 });
+Route::get('/addadminview',[ShopController::class,'show']);
+
+Route::post('/addadmin',[ShopController::class,'store']);
 
 Route::post('/productsearch',[DealerItemController::class,'productsearch']);
 
